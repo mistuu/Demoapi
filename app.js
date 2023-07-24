@@ -21,7 +21,7 @@ app.use('/gets',getRoute)
 //     res.send('Hello World ')
 // })
 
-const mongoURI =  "mongodb+srv://rock:rock@cluster0.1uuakzo.mongodb.net/Demo?retryWrites=true&w=majority" 
+const mongoURI =  "mongodb+srv://rock:rock@cluster0.zskdioe.mongodb.net/Demo?retryWrites=true&w=majority" 
  mongoose.connect(mongoURI).then(() => console.log("connection sucessfull"));
 //listner port
 let port =process.env.PORT || 3000
