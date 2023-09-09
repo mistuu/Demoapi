@@ -7,13 +7,14 @@ const Post=require('../modals/Post')
 router.post('/',async(req,res)=>{
  console.log(req.body);
     const post=new Post({
-        title:req.body.title,
-        description:req.body.description
+        uName:req.body.uName,
+        uEmail:req.body.uEmail,
+        uNumber:req.body.uNumber
     });
     try {
         const savePost=await post.save();
-        res.json(savePost)
-        
+        // res.json(savePost)  
+        res.status(200).json({ message: 'Data received successfully' });
     } catch (error) {
         res.json({message:error})
     }
